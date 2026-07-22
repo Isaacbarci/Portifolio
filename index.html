@@ -738,6 +738,60 @@ footer::before{
   }
 }
 
+
+/* ===== Mobile First Refinements ===== */
+@media (max-width:768px){
+  .wrap,.topbar-inner{padding-left:20px!important;padding-right:20px!important;}
+  .hero{padding:42px 0 54px!important;}
+  .hero-inner{grid-template-columns:1fr!important;gap:24px!important;text-align:center;}
+  .hero-photo{justify-self:center!important;margin:0 auto 8px!important;}
+  .hero-photo .frame{width:180px!important;height:220px!important;}
+  .hero-name{font-size:clamp(34px,9vw,46px)!important;}
+  .hero-role{max-width:100%!important;font-size:16px!important;line-height:1.65!important;margin:18px auto 0!important;}
+  .eyebrow{justify-content:center!important;}
+  .hero-cta{justify-content:center!important;gap:12px!important;}
+  .hero-cta .btn{
+    width:100%;
+    max-width:320px;
+    justify-content:center;
+  }
+  .stats{grid-template-columns:repeat(2,1fr)!important;gap:18px!important;}
+  section{padding:52px 0!important;}
+  .section-head{text-align:center;margin-bottom:34px!important;}
+  .section-kicker{justify-content:center!important;}
+  .project-grid,
+  .skill-grid,
+  .specialty-grid,
+  .tech-grid,
+  .registro-grid{
+    grid-template-columns:1fr!important;
+  }
+  .project-card,
+  .specialty-card,
+  .skill-card,
+  .tech-item,
+  .registro-cell{
+    padding:22px!important;
+  }
+  .tl-item{
+    grid-template-columns:1fr!important;
+    gap:10px!important;
+    padding:24px 0!important;
+  }
+  .edu-row{
+    grid-template-columns:1fr!important;
+  }
+  .foot-top,
+  .foot-bottom{
+    text-align:center;
+    justify-content:center!important;
+  }
+}
+@media (max-width:390px){
+  .stats{grid-template-columns:1fr!important;}
+  .hero-photo .frame{width:160px!important;height:196px!important;}
+}
+
 </style>
 </head>
 <body>
