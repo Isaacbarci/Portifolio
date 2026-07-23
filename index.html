@@ -261,7 +261,7 @@
   .skill-grid{
     display:grid;
     grid-template-columns: repeat(4,1fr);
-    gap:1px;
+    gap:1.5px;
     background:var(--line);
     border:1px solid var(--line);
   }
@@ -476,7 +476,7 @@
 
 .specialty-grid{
   display:grid; grid-template-columns:repeat(4,1fr);
-  gap:1px; background:var(--line); border:1px solid var(--line);
+  gap:1.5px; background:var(--line); border:1px solid var(--line);
 }
 .specialty-card{
   background:#FBFAF6; padding:26px 22px; min-height:175px;
@@ -779,6 +779,10 @@ footer::before{
 
 
 /* ===== Mobile First Refinements ===== */
+@media (max-width:1099px){
+  .section-head{text-align:center;}
+  .section-kicker{justify-content:center;}
+}
 @media (max-width:768px){
   .wrap,.topbar-inner{padding-left:20px!important;padding-right:20px!important;}
   .hero{padding:42px 0 54px!important;}
