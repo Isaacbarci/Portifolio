@@ -8,7 +8,7 @@
 <meta content="Isaac Douglas Barci Dutra Daniel — Engenheiro Mecânico, Engenheiro de Software e Técnico Industrial. Mais de 15 anos em planejamento, qualidade, sistemas industriais e transformação digital." name="description"/>
 <link href="https://isaacbarci-portifolio.vercel.app/" rel="canonical"/>
 <meta content="#10151C" name="theme-color"/>
-<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2310151C'/%3E%3Ctext x='32' y='40' font-family='Georgia,serif' font-size='26' fill='%23C9A870' text-anchor='middle'%3EIB%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -394,15 +394,22 @@
     display:flex;
     flex-direction:column;
   }
-  .project-card .eyebrow-sm{ font-size:11.5px; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold-deep); font-weight:600; margin-bottom:10px; padding-right:60px; }
-  .project-card h3{ font-family:'Source Serif 4', serif; font-weight:600; font-size:20px; color:var(--ink); margin-bottom:10px; padding-right:60px; }
+  .project-card .eyebrow-sm{ font-size:11.5px; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold-deep); font-weight:600; margin-bottom:10px; }
+  .project-card h3{ font-family:'Source Serif 4', serif; font-weight:600; font-size:20px; color:var(--ink); margin-bottom:10px; }
   .project-card p{ font-size:14px; line-height:1.65; color:#454D55; flex:1; }
   .project-card .tag-row{ margin-top:16px; }
-  .project-illus{
-    position:absolute; top:24px; right:24px;
-    width:56px !important; height:auto !important;
-    opacity:0.4;
-    pointer-events:none;
+  .project-thumb{
+    display:block;
+    width:calc(100% + 56px);
+    margin:-26px -28px 20px -28px;
+    height:180px;
+    object-fit:cover;
+    object-position:center center;
+    border-bottom:1px solid var(--line);
+    background:#10151C;
+  }
+  @media (max-width:768px){
+    .project-thumb{ width:calc(100% + 44px); margin:-22px -22px 18px -22px; height:170px; }
   }
 
   .cert-group{ margin-bottom:30px; }
@@ -1058,6 +1065,7 @@ footer::before{
 </div>
 <div class="project-grid">
 <div class="project-card reveal">
+<img alt="Tela de seleção de romaneio do Sistema Romaneio Palmont" class="project-thumb" loading="lazy" src="assets/screenshots/sistema-romaneio.jpg"/>
 <div class="eyebrow-sm">PWA · Android TWA</div>
 <h3>Sistema Romaneio Palmont</h3>
 <p>Aplicação própria para gestão de dados de campo — controle de spools, estruturas de suporte e materiais em obras industriais, com armazenamento offline e sincronização de planilhas em tempo real.</p>
@@ -1070,21 +1078,9 @@ footer::before{
 <div style="margin-top:20px;">
 <a class="btn btn-gold" href="https://romaneio-palmont.vercel.app/" rel="noopener" target="_blank">Ver Aplicação</a>
 </div>
-<svg class="project-illus" fill="none" viewbox="0 0 180 150" xmlns="http://www.w3.org/2000/svg">
-<path d="M20 120 L20 70 L55 50 L55 20" fill="none" stroke="#A9824C" stroke-width="2.5"></path>
-<circle cx="20" cy="120" fill="#A9824C" r="4"></circle>
-<circle cx="20" cy="70" fill="#A9824C" r="4"></circle>
-<circle cx="55" cy="50" fill="#A9824C" r="4"></circle>
-<circle cx="55" cy="20" fill="#A9824C" r="4"></circle>
-<path d="M75 130 L75 90 L110 70 L145 90 L145 130" fill="none" opacity="0.75" stroke="#1B222B" stroke-width="2.5"></path>
-<circle cx="75" cy="130" fill="#1B222B" opacity="0.75" r="4"></circle>
-<circle cx="75" cy="90" fill="#1B222B" opacity="0.75" r="4"></circle>
-<circle cx="110" cy="70" fill="#1B222B" opacity="0.75" r="4"></circle>
-<circle cx="145" cy="90" fill="#1B222B" opacity="0.75" r="4"></circle>
-<circle cx="145" cy="130" fill="#1B222B" opacity="0.75" r="4"></circle>
-</svg>
 </div>
 <div class="project-card reveal">
+<img alt="Relatório de Spools por Status" class="project-thumb" loading="lazy" src="assets/screenshots/status-spools.jpg"/>
 <div class="eyebrow-sm">Web App</div>
 <h3>Status Spools</h3>
 <p>Aplicação para consulta e geração de relatórios de status de spools, dando visibilidade rápida do avanço físico e da situação de cada item em campo.</p>
@@ -1096,18 +1092,9 @@ footer::before{
 <div style="margin-top:20px;">
 <a class="btn btn-gold" href="https://status-spools.vercel.app/" rel="noopener" target="_blank">Ver Aplicação</a>
 </div>
-<svg class="project-illus" fill="none" viewbox="0 0 180 150" xmlns="http://www.w3.org/2000/svg">
-<rect fill="none" height="110" opacity="0.55" rx="2" stroke="#1B222B" stroke-width="2" width="140" x="20" y="20"></rect>
-<line opacity="0.3" stroke="#1B222B" stroke-width="1.5" x1="20" x2="160" y1="45" y2="45"></line>
-<circle cx="35" cy="60" fill="#A9824C" r="5"></circle>
-<line opacity="0.6" stroke="#A9824C" stroke-width="2" x1="50" x2="140" y1="60" y2="60"></line>
-<circle cx="35" cy="80" fill="#5B6472" r="5"></circle>
-<line opacity="0.6" stroke="#5B6472" stroke-width="2" x1="50" x2="120" y1="80" y2="80"></line>
-<circle cx="35" cy="100" fill="#1B222B" opacity="0.75" r="5"></circle>
-<line opacity="0.5" stroke="#1B222B" stroke-width="2" x1="50" x2="100" y1="100" y2="100"></line>
-</svg>
 </div>
 <div class="project-card reveal">
+<img alt="Sistema RDO Palmont — tela de indicadores do dia" class="project-thumb" loading="lazy" src="assets/screenshots/rdo.jpg"/>
 <div class="eyebrow-sm">Web App</div>
 <h3>RDO — Relatório Diário de Obra</h3>
 <p>Aplicação para preenchimento de RDOs em campo, com registro de fotos direto pela câmera. Otimizada para rodar de forma fluida mesmo com muitas imagens e uso prolongado em obra, usando armazenamento local eficiente e salvamento automático.</p>
@@ -1120,16 +1107,9 @@ footer::before{
 <div style="margin-top:20px;">
 <a class="btn btn-gold" href="https://rdo-xi.vercel.app/" rel="noopener" target="_blank">Ver Aplicação</a>
 </div>
-<svg class="project-illus" fill="none" viewbox="0 0 180 150" xmlns="http://www.w3.org/2000/svg">
-<rect fill="none" height="120" opacity="0.55" rx="4" stroke="#1B222B" stroke-width="2" width="90" x="45" y="15"></rect>
-<rect fill="none" height="45" rx="2" stroke="#A9824C" stroke-width="2" width="70" x="55" y="28"></rect>
-<circle cx="90" cy="50" fill="none" r="10" stroke="#A9824C" stroke-width="2"></circle>
-<circle cx="90" cy="50" fill="#A9824C" r="4"></circle>
-<line opacity="0.5" stroke="#5B6472" stroke-width="2" x1="55" x2="125" y1="85" y2="85"></line>
-<line opacity="0.5" stroke="#5B6472" stroke-width="2" x1="55" x2="125" y1="95" y2="95"></line>
-</svg>
 </div>
 <div class="project-card reveal">
+<img alt="Consulta de Espessura — Tabela ASME" class="project-thumb" loading="lazy" src="assets/screenshots/tabela-espessura.jpg"/>
 <div class="eyebrow-sm">Web App</div>
 <h3>Tabela de Espessura</h3>
 <p>Aplicação de consulta que retorna a espessura de parede da tubulação a partir do diâmetro nominal e do schedule (SCH) do material, agilizando a especificação técnica em campo e escritório.</p>
@@ -1141,16 +1121,9 @@ footer::before{
 <div style="margin-top:20px;">
 <a class="btn btn-gold" href="https://tabela-espessura.vercel.app/" rel="noopener" target="_blank">Ver Aplicação</a>
 </div>
-<svg class="project-illus" fill="none" viewbox="0 0 180 150" xmlns="http://www.w3.org/2000/svg">
-<rect fill="none" height="110" opacity="0.55" rx="2" stroke="#1B222B" stroke-width="2" width="130" x="25" y="20"></rect>
-<line opacity="0.35" stroke="#1B222B" stroke-width="1.5" x1="25" x2="155" y1="45" y2="45"></line>
-<line opacity="0.25" stroke="#1B222B" stroke-width="1.5" x1="75" x2="75" y1="45" y2="130"></line>
-<line opacity="0.25" stroke="#1B222B" stroke-width="1.5" x1="115" x2="115" y1="45" y2="130"></line>
-<circle cx="95" cy="82" fill="#A9824C" r="5"></circle>
-<circle cx="135" cy="102" fill="#C9A870" r="5"></circle>
-</svg>
 </div>
 <div class="project-card reveal">
+<img alt="Calculadora de M² para chapas de caldeiraria" class="project-thumb" loading="lazy" src="assets/screenshots/area-m2.jpg"/>
 <div class="eyebrow-sm">Web App</div>
 <h3>Área m² Caldeiraria</h3>
 <p>Aplicação para cálculo de área em metros quadrados de chapas e componentes de caldeiraria, agilizando o levantamento de quantitativos para orçamento e produção.</p>
@@ -1162,14 +1135,9 @@ footer::before{
 <div style="margin-top:20px;">
 <a class="btn btn-gold" href="https://aream2caldeiraria.vercel.app/" rel="noopener" target="_blank">Ver Aplicação</a>
 </div>
-<svg class="project-illus" fill="none" viewbox="0 0 180 150" xmlns="http://www.w3.org/2000/svg">
-<rect fill="none" height="70" stroke="#A9824C" stroke-width="2.5" width="90" x="30" y="35"></rect>
-<path d="M120 35 L150 55 L150 125 L60 125 L60 105" fill="none" opacity="0.6" stroke="#1B222B" stroke-width="2"></path>
-<path d="M120 35 L120 105 L60 105" fill="none" opacity="0.3" stroke="#1B222B" stroke-dasharray="3 3" stroke-width="1.5"></path>
-<text fill="#5B6472" font-family="monospace" font-size="16" opacity="0.6" x="55" y="70">m²</text>
-</svg>
 </div>
 <div class="project-card reveal">
+<img alt="Plugin exportando lista de materiais no GstarCAD" class="project-thumb" loading="lazy" src="assets/screenshots/gerador-materiais.jpg"/>
 <div class="eyebrow-sm">Plugin CAD · AutoCAD &amp; GstarCAD</div>
 <h3>Gerador de Lista de Materiais</h3>
 <p>Plugin desenvolvido para AutoCAD e GstarCAD que lê o desenho — direto do DWG aberto ou a partir do PDF exportado, conforme o caso — e gera automaticamente a lista de materiais correspondente, exportada em planilha Excel/CSV pronta para conferência, orçamento ou produção.</p>
@@ -1180,22 +1148,6 @@ footer::before{
 <span class="tag">Excel/CSV</span>
 </div>
 <div style="height:68px;" aria-hidden="true"></div>
-<svg class="project-illus" fill="none" viewbox="0 0 180 150" xmlns="http://www.w3.org/2000/svg">
-<rect fill="none" height="100" opacity="0.6" stroke="#1B222B" stroke-width="2" width="80" x="18" y="22"></rect>
-<line opacity="0.3" stroke="#1B222B" stroke-width="1.5" x1="18" x2="98" y1="42" y2="42"></line>
-<path d="M30 60 L48 60 L48 78 L66 78" fill="none" opacity="0.5" stroke="#1B222B" stroke-dasharray="3 3" stroke-width="1.5"></path>
-<circle cx="30" cy="60" fill="#1B222B" opacity="0.6" r="3"></circle>
-<circle cx="66" cy="78" fill="#1B222B" opacity="0.6" r="3"></circle>
-<path d="M104 74 L124 74" stroke="#A9824C" stroke-width="2.5"></path>
-<path d="M116 66 L124 74 L116 82" fill="none" stroke="#A9824C" stroke-width="2.5"></path>
-<rect fill="none" height="96" rx="2" stroke="#A9824C" stroke-width="2.5" width="46" x="134" y="24"></rect>
-<line stroke="#A9824C" stroke-width="2" x1="141" x2="173" y1="40" y2="40"></line>
-<line opacity="0.6" stroke="#1B222B" stroke-width="1.5" x1="141" x2="173" y1="55" y2="55"></line>
-<line opacity="0.6" stroke="#1B222B" stroke-width="1.5" x1="141" x2="165" y1="68" y2="68"></line>
-<line opacity="0.6" stroke="#1B222B" stroke-width="1.5" x1="141" x2="173" y1="81" y2="81"></line>
-<line opacity="0.6" stroke="#1B222B" stroke-width="1.5" x1="141" x2="160" y1="94" y2="94"></line>
-<line opacity="0.6" stroke="#1B222B" stroke-width="1.5" x1="141" x2="173" y1="107" y2="107"></line>
-</svg>
 </div>
 </div>
 </section>
