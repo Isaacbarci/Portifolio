@@ -260,7 +260,7 @@
 
   .skill-grid{
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    grid-template-columns: repeat(4,1fr);
     gap:1px;
     background:var(--line);
     border:1px solid var(--line);
@@ -430,13 +430,13 @@
   }
   @media (max-width:640px){ footer{ padding:48px 0 32px; } }
   .foot-top{
-    display:flex; justify-content:space-between; align-items:flex-start;
+    display:flex; justify-content:space-between; align-items:center;
     flex-wrap:wrap; gap:36px;
     padding-bottom:46px; border-bottom:1px solid var(--line-dark);
   }
   .foot-title{ font-family:'Source Serif 4', serif; font-size:26px; color:#F0EEE8; max-width:420px; line-height:1.3; }
   .foot-links{ display:flex; flex-direction:column; gap:4px; }
-  .foot-links a{ font-size:14px; padding:10px 0; display:inline-block; }
+  .foot-links a{ font-size:14px; padding:14px 0; display:inline-block; }
   .foot-links a:hover{ color:var(--gold-light); }
   .foot-bottom{
     margin-top:30px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
@@ -499,7 +499,11 @@
 .project-card .tag{ font-size:12px; padding:8px 12px; }
 
 .tech-grid{
-  display:grid; grid-template-columns:repeat(auto-fit,minmax(155px,1fr)); gap:10px;
+  display:grid; grid-template-columns:repeat(6,1fr); gap:10px;
+}
+@media (max-width:1099px) and (min-width:769px){
+  .tech-grid{ grid-template-columns:repeat(4,1fr); }
+  .skill-grid{ grid-template-columns:repeat(2,1fr); }
 }
 .tech-item{
   background:#FBFAF6; border:1px solid var(--line); padding:18px;
@@ -715,11 +719,12 @@ section{
 }
 
 .registro-cell{
-  transition:background .2s ease;
+  transition:background .2s ease, box-shadow .2s ease;
 }
 
 .registro-cell:hover{
   background:#141B24;
+  box-shadow:inset 0 0 0 1px var(--gold-light);
 }
 
 footer{
@@ -810,6 +815,14 @@ footer::before{
   .foot-bottom{
     text-align:center;
     justify-content:center!important;
+    align-items:center!important;
+  }
+  .foot-bottom{
+    flex-direction:column;
+    gap:6px;
+  }
+  .foot-links{
+    align-items:center;
   }
 }
 @media (max-width:390px){
@@ -1263,7 +1276,7 @@ footer::before{
 <a href="mailto:isaacbarci@gmail.com">isaacbarci@gmail.com</a>
 <a href="https://wa.me/5512988187589" rel="noopener" target="_blank">(12) 98818-7589 · WhatsApp</a>
 <a href="https://linkedin.com/in/isaacbarci" rel="noopener" target="_blank">linkedin.com/in/isaacbarci</a>
-<span style="color:#7C8594; font-size:13px;">São José dos Campos — SP, Brasil</span>
+<span style="display:inline-block; padding:14px 0; color:#7C8594; font-size:14px;">São José dos Campos — SP, Brasil</span>
 </div>
 </div>
 <div class="foot-bottom">
